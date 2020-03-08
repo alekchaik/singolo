@@ -131,26 +131,32 @@ p.motto {
 }
 
 h3 {
-    margin-top: 13px;
     font-size: 1.8rem;
     word-spacing: 0;
 }
 
+.worker__name {
+    margin-top: 13px;
+
+}
+
 p.bio {
     margin-top: 10px;
-    margin-bottom: 22px;
     font-size: 1.1rem;
     text-align: justify;
     line-height: 22px;
 }
 
 .worker__media {
-    margin-right: 5.5px;
-    transition: transform .5s ease-in-out;
-
+    margin-top: 22px;
 }
 
-.worker__media:hover {
+.worker__media img{
+    margin-right: 5.5px;
+    transition: transform .5s ease-in-out;
+}
+
+.worker__media img:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
