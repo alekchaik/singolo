@@ -1,3 +1,8 @@
+:root {
+    --slide-first: 0px;
+    --slide-previous: 1000px;
+}
+
 @font-face {
     font-family: 'Lato';
     font-style: normal;
@@ -28,12 +33,13 @@
     box-sizing: border-box;
 }
 
-
 .wrapper {
     width: 1020px;
     margin: 0 auto;
     padding: 0 40px;
+    overflow: hidden;
 }
+
 .header {
     height: 95px;
     color: #ffffff;
@@ -86,15 +92,51 @@
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
 }
+
 .slider .wrapper {
     position: relative;
 }
-.slider__phones div, .arrow{
+
+.slider__panel {
+    width: 890px;
+    margin: 0 auto;
+    height: 601px;
+    overflow: hidden;
+}
+
+.first_slide div, .second_slide div, .arrow{
     position: absolute;
+}
+
+.first_slide {
+    transform: translateX(var(--slide-first));
+}
+
+.second_slide {
+    transform: translateX(var(--slide-previous));
+}
+.second_slide div{
+    left: 321.5px;
+    top: 50px;
+}
+.phone_image {
+    right: 1100px;
+}
+
+.transition div {
+    transition: transform 1s ease-in-out;
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 .arrow {
     top:281px;
+}
+
+.arrow img {
+    cursor: pointer;
 }
 
 .left_arrow {
@@ -107,12 +149,12 @@
 
 .vertical_phone {
     top: 53px;
-    left: 112px;
+    left: 72px;
 }
 
 .horizontal_phone {
     top: 174px;
-    left: 425px;
+    left: 385px;
 }
 
 .services {
