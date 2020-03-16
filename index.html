@@ -13,17 +13,17 @@
             <a href="#" class="logo_url">Singolo<span class="star">*</span></a>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li  class="navigation_selected"><a href="#">Home</a><span class="dot">·</span></li> 
-                    <li><a href="#">Services</a><span class="dot">·</span></li>
-                    <li><a href="#">Portfolio</a><span class="dot">·</span></li>
-                    <li><a href="#">About</a><span class="dot">·</span></li>
-                    <li><a href="#">Contact</a></li>
+                    <li ><a href="#" id="navigation_selected" class="home">Home</a><span class="dot">·</span></li> 
+                    <li><a href="#services">Services</a><span class="dot">·</span></li>
+                    <li><a href="#portfolio">Portfolio</a><span class="dot">·</span></li>
+                    <li><a href="#about_us">About</a><span class="dot">·</span></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <div class="slider">
+        <div class="slider" id="slider">
             <div class="wrapper">
                 <div class="arrow left_arrow">
                         <img src="./assets/left_arrow.png" alt="left_arrow" id="left">
@@ -34,19 +34,39 @@
                 <div class="slider__panel">
                     <div class="slider__phones">
                         <div class="first_slide">
-                            <div class="vertical_phone"><img src="./assets/iphone_vertical.png" alt="vertical iphone"></div>
-                            <div class="horizontal_phone"><img src="./assets/iphone_horizontal.png" alt="horizontal iphone"></div>
+                            <div class="first_phone">
+                                <div class="vertical_phone shadow">
+                                    <img class="vertical_phone" src="./assets/slider/vertical-shadow.svg" alt="">
+                                </div>
+                                <div class="vertical_phone">
+                                    <img src="./assets/slider/vertical-phone-off.svg" alt="vertical iphone">
+                                </div>
+                                <div class="vertical_phone_image">
+                                    <img src="./assets/slider/vertical-phone-image.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="second_phone">
+                                <div class="horizontal_phone shadow">
+                                    <img src="./assets/slider/horizontal-phone-shadow.svg" alt="horizontal iphone">
+                                </div>
+                                <div class="horizontal_phone">
+                                    <img src="./assets/slider/horizontal-phone.svg" alt="">
+                                </div>
+                                <div class="horizontal_phone_image">
+                                    <img src="./assets/slider/horizontal-phone-image.svg" alt="">
+                                </div>
+                            </div>
                         </div>
                         <div class="second_slide">
                             <div>
-                                <img src="./assets/еуые/kek.png" alt="">
+                                <img src="./assets/slider/slide-2-phone.svg" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <section class="services">
+        <section class="services" id="services">
             <div class="wrapper">
                 <h1>Our Services</h1>
                 <p class="services__paragraph">
@@ -122,7 +142,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="wrapper">
               <h2>Portfolio</h2>
               <p class="portfolio__paragraph">
@@ -154,7 +174,7 @@
               </div>
             </div>
           </section>
-          <section class="about-us">
+          <section class="about-us" id="about_us">
             <div class="wrapper">
               <h2 class="wrapper_header">About Us</h2>
               <p class="motto">
@@ -209,7 +229,7 @@
               </div>
             </div>
           </section>
-          <section class="quote">
+          <section class="quote" id="contact">
             <div class="wrapper">
                 <h2>Get a Quote</h2>
                 <p class="motto">
