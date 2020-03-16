@@ -32,6 +32,8 @@
     margin: 0;
     box-sizing: border-box;
     line-height: 100%;
+    font-family: "Lato";
+
 }
 
 .wrapper {
@@ -245,7 +247,6 @@ h1 {
   
 html {
     font-size: 10px;
-    font-family: "Lato";
     height: 100vh;
     color: #666d89;
 }
@@ -530,6 +531,7 @@ p.bio {
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 20;
       display: flex;
       background-color: rgba(0,0,0,0.5);
       justify-content: center;
