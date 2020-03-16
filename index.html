@@ -58,7 +58,11 @@
                             </div>
                         </div>
                         <div class="second_slide">
-                            <div>
+                            <div class="second_slide__back">
+                                <img src="./assets/slider/slide-2-back.svg" alt="">
+                                <img src="./assets/slider/slide-2-back.svg" alt="">
+                            </div>
+                            <div class="second_slide__phone">
                                 <img src="./assets/slider/slide-2-phone.svg" alt="">
                             </div>
                         </div>
@@ -151,7 +155,7 @@
               </p>
               <div>
                 <ul class="portfolio__list">
-                  <li class="portfolio__selected"><span>All</span></li>
+                  <li id="portfolio__selected" class="all">All</li>
                   <li>Web Design</li>
                   <li>Graphic Design</li>
                   <li>Artwork</li>
@@ -159,18 +163,18 @@
               </div>
     
               <div class="layout-4-column">
-                <img src="./assets/boat.png" alt="boat" />
-                <img src="./assets/girl.png" alt="girl" />
-                <img src="./assets/city.png" alt="city" />
-                <img src="./assets/robot.png" alt="robot" />
-                <img src="./assets/creatures.png" alt="creatures" />
-                <img src="./assets/mini-roadmap.png" alt="mini roadmap" />
-                <img src="./assets/figures.png" alt="figures" />
-                <img src="./assets/birds.png" alt="birds" />
-                <img src="./assets/castle.png" alt="castle" />
-                <img src="./assets/note.png" alt="note" />
-                <img src="./assets/monster.png" alt="monster" />
-                <img src="./assets/broken-window.png" alt="broken window" />
+                <img src="./assets/boat.png" alt="boat" class="item1"/>
+                <img src="./assets/girl.png" alt="girl" class="item2"/>
+                <img src="./assets/city.png" alt="city" class="item3"/>
+                <img src="./assets/robot.png" alt="robot" class="item4"/>
+                <img src="./assets/creatures.png" alt="creatures" class="item5"/>
+                <img src="./assets/mini-roadmap.png" alt="mini roadmap" class="item6"/>
+                <img src="./assets/figures.png" alt="figures" class="item7"/>
+                <img src="./assets/birds.png" alt="birds" class="item8"/>
+                <img src="./assets/castle.png" alt="castle" class="item9"/>
+                <img src="./assets/note.png" alt="note" class="item10"/>
+                <img src="./assets/monster.png" alt="monster" class="item11"/>
+                <img src="./assets/broken-window.png" alt="broken window" class="item12"/>
               </div>
             </div>
           </section>
@@ -239,8 +243,8 @@
                         <form action="#" class="quote__form">
                             <input type="text" name="name" placeholder="Name(Required)" required>
                             <input type="email" name="email" placeholder="Email(Required)" required>
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea rows="10" cols="45" name="description" placeholder="Describe your project in detail..."></textarea>
+                            <input type="text" name="subject" placeholder="Subject" id="form_subject">
+                            <textarea rows="10" cols="45" name="description" placeholder="Describe your project in detail..." maxlength="1200" id="form_description"></textarea>
                             <input type="submit" value="Submit" id="submit">
                         </form>
                     <div class="quote__contact_information">
@@ -270,6 +274,16 @@
                 </div>
             </div>
         </section>
+        <aside class="modal off">
+            <div class="modal__window">
+                <p class="window__information">Письмо отправлено</p>
+                <p class="window__information" id="window_subject">Тема:</p>
+                <p class="window__information form_description" id="window_description">Описание <br> sdfsdfsdfsdf</p>
+                <div class="modal__container">
+                    <button id="container__button">OK</button>
+                </div>
+            </div>
+        </aside>
     </main>
     <footer>
         <div class="wrapper">
@@ -288,3 +302,39 @@
     </footer>
 </body>
 </html>
+<!-- <div class="layout-4-column">
+                <img src="./assets/boat.png" alt="boat" style="
+    grid-area: right1;
+">
+                <img src="./assets/girl.png" alt="girl" style="
+    grid-area: centerLeft1;
+">
+                <img src="./assets/city.png" alt="city" style="grid-area: centerRight1;">
+                <img src="./assets/robot.png" alt="robot" style="
+    grid-area: left1;
+">
+                <img src="./assets/creatures.png" alt="creatures" style="
+    grid-area: left2;
+">
+                <img src="./assets/mini-roadmap.png" alt="mini roadmap" style="
+    grid-area: centerLeft2;
+">
+                <img src="./assets/figures.png" alt="figures" style="
+    grid-area:  centerRight2;
+">
+                <img src="./assets/birds.png" alt="birds" style="
+    grid-area: right2;
+">
+                <img src="./assets/castle.png" alt="castle" style="
+    grid-area: left3;
+">
+                <img src="./assets/note.png" alt="note" style="
+    grid-area: centerLeft3;
+">
+                <img src="./assets/monster.png" alt="monster" style="
+    grid-area:  centerRight3;
+">
+                <img src="./assets/broken-window.png" alt="broken window" style="
+    grid-area: right3;
+">
+              </div> -->
