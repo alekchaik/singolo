@@ -33,7 +33,7 @@
     box-sizing: border-box;
     line-height: 100%;
     font-family: "Lato";
-
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -42,17 +42,22 @@
     padding: 0 40px;
     overflow: hidden;
 }
-
+.anchor {
+    position: absolute;
+    margin-top:-95px;
+}
 .header {
     position:fixed;
     top: 0;
     width: 100%;
-    z-index: 15;
+    z-index: 10;
     height: 95px;
     color: #ffffff;
     text-transform: uppercase;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .header a {
@@ -101,6 +106,12 @@ main {
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
     user-select: none;
+    transition: background 1s ease-in-out, border 1s ease-in-out;
+}
+.slider.second {
+    background-color: #648BF0;
+    border-bottom: 6px solid #648BF0;
+
 }
 
 .slider .wrapper {
@@ -531,14 +542,17 @@ p.bio {
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 20;
+      z-index: -1;
       display: flex;
       background-color: rgba(0,0,0,0.5);
       justify-content: center;
       align-items: center;
+      opacity:1;
+      transition: opacity 0.5s ease-in-out;
   }
-  .modal.off {
-      z-index: -1;
+  .modal.off,
+  .header.off {
+      opacity: 0;
   }
   .modal__window {
     position: fixed;

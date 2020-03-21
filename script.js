@@ -1,14 +1,21 @@
 const header = document.querySelector('.header');
 const menu = document.querySelectorAll('.navigation li a');
+const sections = [];
+document.querySelectorAll('.wrapper').forEach(el => sections.push(el.getBoundingClientRect()));
+sections.pop();
 function toggleMenuState(event) {
     document.querySelector('#navigation_selected').removeAttribute('id');
     event.target.id = 'navigation_selected';
-    console.log(event.target.classList[0] != 'home')
-    if (event.target.classList[0] != 'home')
-        header.style.display = 'none';
 }
-window.addEventListener('mousewheel', (event) => {
-    header.style.display = 'inherit';
+window.addEventListener('mousewheel', (event) => { 
+    for (let i = 0; i < sections.length; i++)
+        if (sections[i].bottom >= -document.body.getBoundingClientRect().top)
+        {
+            document.querySelector('#navigation_selected').removeAttribute('id');
+            menu[i].id = 'navigation_selected';
+
+            break;
+        };
 })
 menu.forEach(el => el.addEventListener('click', toggleMenuState))
 
@@ -46,6 +53,7 @@ function slidePhones(el) {
             }, 1000);
         },0);
     }
+    document.querySelector('#slider').classList.toggle('second');
     isFirstActive = !isFirstActive;
 }
 
@@ -98,8 +106,13 @@ function renderForm(event) {
     const description = document.querySelector('#form_description').value;
     document.querySelector('#window_subject').innerHTML = (subject) ? `Тема: ${subject}` : 'Без темы';
     document.querySelector('#window_description').innerHTML = (description) ? `Описание: <br>${description}` : 'Без описания';
+    modalWindow.style.zIndex = '20';
     modalWindow.classList.toggle('off');
-
 }
-windBtn.addEventListener('click',() => modalWindow.classList.toggle('off'));
+windBtn.addEventListener('click',() => {
+
+    console.log('asd');
+    modalWindow.classList.toggle('off');
+    setTimeout(()=> modalWindow.style.zIndex = '-1', 1000);
+});
 form.addEventListener('submit', renderForm);
