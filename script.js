@@ -6,6 +6,11 @@ sections.pop();
 function toggleMenuState(event) {
     document.querySelector('#navigation_selected').removeAttribute('id');
     event.target.id = 'navigation_selected';
+    if (!navigation.classList.contains('active_navigation')) {
+        burger.classList.toggle('active_menu');
+        navigation.classList.toggle('active_navigation');
+        setTimeout(()=> navigation.style.display = 'none', 500)
+    }
 }
 window.addEventListener('mousewheel', (event) => { 
     for (let i = 0; i < sections.length; i++)
@@ -116,3 +121,18 @@ windBtn.addEventListener('click',() => {
     setTimeout(()=> modalWindow.style.zIndex = '-1', 1000);
 });
 form.addEventListener('submit', renderForm);
+
+const burger = document.querySelector('#burger_menu');
+const navigation = document.querySelector('.header__navigation');
+function menuRender(event) {
+    burger.classList.toggle('active_menu');
+    if (navigation.classList.contains('active_navigation')) {
+        navigation.style.display = 'block';
+       setTimeout(()=>navigation.classList.toggle('active_navigation'),0); 
+        
+    } else {
+        navigation.classList.toggle('active_navigation');
+        setTimeout(()=> navigation.style.display = 'none', 500)
+    }
+}
+burger.addEventListener('click', menuRender);
