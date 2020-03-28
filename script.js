@@ -123,8 +123,10 @@ windBtn.addEventListener('click',() => {
 form.addEventListener('submit', renderForm);
 
 const burger = document.querySelector('#burger_menu');
-const navigation = document.querySelector('.header__navigation');
 function menuRender(event) {
+    const logo = document.querySelector('.logo_url');
+    const navigation = document.querySelector('.header__navigation');
+    logo.classList.toggle('active_logo');
     burger.classList.toggle('active_menu');
     if (navigation.classList.contains('active_navigation')) {
         navigation.style.display = 'block';
