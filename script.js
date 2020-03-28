@@ -7,6 +7,7 @@ function toggleMenuState(event) {
     document.querySelector('#navigation_selected').removeAttribute('id');
     event.target.id = 'navigation_selected';
     if (!navigation.classList.contains('active_navigation')) {
+        document.querySelector('.logo_url').classList.toggle('active_logo');
         burger.classList.toggle('active_menu');
         navigation.classList.toggle('active_navigation');
         setTimeout(()=> navigation.style.display = 'none', 500)
@@ -126,8 +127,7 @@ const navigation = document.querySelector('.header__navigation');
 const burger = document.querySelector('#burger_menu');
 function menuRender(event) {
     burger.style.pointerEvents = 'none';
-    const logo = document.querySelector('.logo_url');
-    logo.classList.toggle('active_logo');
+    document.querySelector('.logo_url').classList.toggle('active_logo');
     burger.classList.toggle('active_menu');
     if (navigation.classList.contains('active_navigation')) {
         navigation.style.display = 'block';
