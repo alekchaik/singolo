@@ -125,6 +125,7 @@ const navigation = document.querySelector('.header__navigation');
 
 const burger = document.querySelector('#burger_menu');
 function menuRender(event) {
+    burger.style.pointerEvents = 'none';
     const logo = document.querySelector('.logo_url');
     logo.classList.toggle('active_logo');
     burger.classList.toggle('active_menu');
@@ -136,5 +137,6 @@ function menuRender(event) {
         navigation.classList.toggle('active_navigation');
         setTimeout(()=> navigation.style.display = 'none', 500)
     }
+    setTimeout(() => burger.style.pointerEvents = 'auto', 700)
 }
 burger.addEventListener('click', menuRender);
