@@ -1147,4 +1147,9 @@ footer {
   .modal__container {
     left: 5%;
   }
+  .active_logo {
+    position: fixed;
+    transform: translateX(-78px);
+
+  }
 }
